@@ -101,6 +101,7 @@ button {
     border: none;
     cursor: pointer;
     color: white;
+    -webkit-tap-highlight-color: transparent;
 }
 
 img {
@@ -112,9 +113,22 @@ display: block;
     width: 2rem;
 }
 
+.faq-question:hover button {
+    background-color: #8F1EC6;
+    color: white;
+}
+
+.faq-question button:focus-visible {
+  outline: 2px solid #AD28EB;
+  outline-offset: 3px;
+}
+
+.faq-question button{
+    transition background-color: 0.2s ease, color: 0.2s ease;
+}
+
 @media (min-width: 768px) {
   body {
     background-image: url("./assets/images/background-pattern-desktop.svg");
   }
-
-
+}   
