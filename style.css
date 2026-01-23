@@ -124,7 +124,7 @@ display: block;
 }
 
 .faq-question button{
-    transition background-color: 0.2s ease, color: 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 @media (min-width: 768px) {
@@ -132,3 +132,11 @@ display: block;
     background-image: url("./assets/images/background-pattern-desktop.svg");
   }
 }   
+
+.faq-answer {
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
