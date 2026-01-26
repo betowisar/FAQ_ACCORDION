@@ -46,10 +46,13 @@ main {
     background-color: white;
     border-radius: 1rem;
     padding: 1.5rem;
+    width: 100%;
+  max-width: 700px;
 }
 
 .faq-item {
     padding: 1rem 0;
+    min-width: 0;
 }
 
 h1 {
@@ -60,6 +63,7 @@ h1 {
 h2 {
     font-weight: 600;
     font-size: 1.25rem;
+    min-width: 0;
 }
 
 h1, h2 {
@@ -80,6 +84,7 @@ p {
     flex-wrap: nowrap;
     flex-grow: 0;
     gap: 1rem;
+    min-width: 0;
 }
 
 header {
@@ -130,11 +135,15 @@ display: block;
 @media (min-width: 768px) {
   body {
     background-image: url("./assets/images/background-pattern-desktop.svg");
+
   }
 }   
 
 .faq-answer {
     display: none;
+     min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .faq-item.active .faq-answer {

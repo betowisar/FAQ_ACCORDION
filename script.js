@@ -4,7 +4,13 @@ const faqButtons = document.querySelectorAll('.faq-question button');
 
 faqButtons.forEach ((button, index) => {
     button.addEventListener ('click', () => {
-        faqItems[index].classList.toggle('active');
+        faqItems.forEach ((item, i) => {
+            item.classList.remove('active');
+            faqButtons[i].textContent = "+";
     });
+
+   faqItems[index].classList.add('active');
+   button.textContent = "-";
+ });
 });
 
